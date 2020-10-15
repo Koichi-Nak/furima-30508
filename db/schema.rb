@@ -25,9 +25,7 @@ ActiveRecord::Schema.define(version: 2020_10_15_121917) do
     t.string "last_name_kan", null: false
     t.string "family_name_kana", null: false
     t.string "last_name_kana", null: false
-    t.integer "birth_year", null: false
-    t.integer "birth_month", null: false
-    t.integer "birth_day", null: false
+    t.integer "birth_date", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
