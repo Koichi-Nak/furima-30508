@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <mxfile host="65bd71144e" modified="2020-10-16T08:11:56.654Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="bMw-5WMefLIEhGx3fpyK" version="13.6.5">
+=======
+<mxfile host="65bd71144e" modified="2020-10-16T07:54:30.750Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="IcKeU-3ff0rjmXw2gef9" version="13.6.5">
+>>>>>>> 85fbabeb9ee308c9a7104aefd05c66dffacc2a2a
     <diagram id="_vplNuiFpLSxX50F0Q7D" name="ページ1">
         <mxGraphModel dx="933" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="480" pageHeight="700" math="0" shadow="0">
             <root>
@@ -120,6 +124,15 @@
                         <mxPoint x="-230" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+<<<<<<< HEAD
+=======
+                <mxCell id="102" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="71" target="94">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-260" y="450" as="sourcePoint"/>
+                        <mxPoint x="-160" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+>>>>>>> 85fbabeb9ee308c9a7104aefd05c66dffacc2a2a
                 <mxCell id="104" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1.007;exitY=-0.067;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="95" target="12">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="-70" y="450" as="sourcePoint"/>
@@ -147,12 +160,15 @@
                 <mxCell id="95" value="item_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="93">
                     <mxGeometry y="50" width="145" height="30" as="geometry"/>
                 </mxCell>
+<<<<<<< HEAD
                 <mxCell id="108" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="56" target="94">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="-290" y="450" as="sourcePoint"/>
                         <mxPoint x="-190" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+=======
+>>>>>>> 85fbabeb9ee308c9a7104aefd05c66dffacc2a2a
             </root>
         </mxGraphModel>
     </diagram>
