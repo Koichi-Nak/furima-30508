@@ -17,27 +17,29 @@
 
 - has_many :items
 - has_many :comments
+- has_one  :order
 
 
 ## items テーブル
 
-| Column               | Type          | Options                                |
-| -------------------- | ------------- | -------------------------------------- |
-| image                | ActiveStorage | null: false                            |
-| item_name            | string        | null: false                            |
-| description          | text          | null: false                            |
-| category             | integer       | null: false                            |
-| item_status          | integer       | null: false                            |
-| delivery_charge      | integer       | null: false                            |
-| shipping_from        | integer       | null: false                            |
-| shipping_preparation | integer       | null: false                            |
-| price                | integer       | null: false                            |
-| user                 | references    | null: false, foreign_key: true         |
+| Column                  | Type          | Options                                |
+| ----------------------- | ------------- | -------------------------------------- |
+| image                   | ActiveStorage | null: false                            |
+| item_name               | string        | null: false                            |
+| description             | text          | null: false                            |
+| category_id             | integer       | null: false                            |
+| item_status_id          | integer       | null: false                            |
+| delivery_charge_id      | integer       | null: false                            |
+| shipping_from_id        | integer       | null: false                            |
+| shipping_preparation_id | integer       | null: false                            |
+| price                   | integer       | null: false                            |
+| user                    | references    | null: false, foreign_key: true         |
 
 ### Association
 
 - belongs_to :user
 - has_many   :comments
+- has_one    :order
 
 
 ## comments テーブル
@@ -56,18 +58,20 @@
 
 ## transactions
 
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| postal_code      | string  | null: false |
-| add_pref         | integer | null: false |
-| add_muni         | string  | null: false |
-| add_local        | string  | null: false |
-| add_house        | string  |             |
-| phone_num        | integer | null: false |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| postal_code      | string     | null: false                    |
+| add_pref_id      | integer    | null: false                    |
+| add_muni         | string     | null: false                    |
+| add_local        | string     | null: false                    |
+| add_house        | string     |                                |
+| phone_num        | string     | null: false                    |
+| order            | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_one    :order
+- belongs_to :order
+
 
 
 ## orders テーブル
@@ -79,4 +83,6 @@
 
 ### Association
 
-- belongs_to :transaction
+- has_one :transaction
+- belongs_to :user
+- belongs_to :item
