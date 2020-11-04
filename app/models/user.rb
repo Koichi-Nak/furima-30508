@@ -4,21 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :nickname,         presence: true, length: { maximum: 6 }
-
-  with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ } do
-    validates :last_name_kan,   presence: true
-    validates :first_name_kan,    presence: true
+  with_options presence: true do
+    validates :nickname
+    validates :last_name_kan, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ }
+    validates :first_name_kan, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ }
+    validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'Full-width katakana characters' }
+    validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'Full-width katakana characters' }
+    validates :birth_date
   end
-
-  with_options presence: true, format: { with: /\A[ぁ-んァ-ン]+\z/ } do
-    validates :last_name_kana,  presence: true
-    validates :first_name_kana,   presence: true
-  end
-
-  validates :birth_date,       presence: true
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX
-
+  validates :password, format: { with: PASSWORD_REGEX, message: 'Include both letters and numbers' }
 end
