@@ -14,4 +14,7 @@ class Item < ApplicationRecord
     #validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'Full-width katakana characters' }
   end
 
+  belongs_to :user
+  has_one_attached :image
+
 end
