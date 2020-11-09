@@ -55,27 +55,27 @@ RSpec.describe Item, type: :model do
       it 'category_idが`--`(id:1)だと登録できない' do
         @item.category_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category Select")
+        expect(@item.errors.full_messages).to include('Category Select')
       end
       it 'item_status_idが`--`(id:1)だと登録できない' do
         @item.item_status_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Item status Select")
+        expect(@item.errors.full_messages).to include('Item status Select')
       end
       it 'delivery_charge_idが`--`(id:1)だと登録できない' do
         @item.delivery_charge_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Delivery charge Select")
+        expect(@item.errors.full_messages).to include('Delivery charge Select')
       end
       it 'shipping_from_idが`--`(id:1)だと登録できない' do
         @item.shipping_from_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping from Select")
+        expect(@item.errors.full_messages).to include('Shipping from Select')
       end
       it 'shipping_preparation_idが`--`(id:1)だと登録できない' do
         @item.shipping_preparation_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping preparation Select")
+        expect(@item.errors.full_messages).to include('Shipping preparation Select')
       end
       it 'priceが空では登録出来ない' do
         @item.price = ''
@@ -85,17 +85,17 @@ RSpec.describe Item, type: :model do
       it 'priceが半角数字でない場合は登録出来ない' do
         @item.price = '１０００'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price Half-width number")
+        expect(@item.errors.full_messages).to include('Price Half-width number')
       end
       it 'priceが300未満の場合は登録出来ない' do
         @item.price = '299'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price Out of setting range")
+        expect(@item.errors.full_messages).to include('Price Out of setting range')
       end
       it 'priceが9999999を超える場合は登録出来ない' do
         @item.price = '10000000'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price Out of setting range")
+        expect(@item.errors.full_messages).to include('Price Out of setting range')
       end
     end
   end
