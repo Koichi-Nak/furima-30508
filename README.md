@@ -33,7 +33,7 @@
 | shipping_from_id        | integer       | null: false                            |
 | shipping_preparation_id | integer       | null: false                            |
 | price                   | integer       | null: false                            |
-| user                    | references    | null: false, foreign_key: true         |
+| user_id                 | integer       | null: false                            |
 
 ### Association
 
