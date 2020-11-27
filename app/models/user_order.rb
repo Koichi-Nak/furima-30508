@@ -6,10 +6,10 @@ class UserOrder
 
   with_options presence: true do
     validates :token
-    validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
+    validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
     validates :add_muni
     validates :add_local
-    validates :phone_num, format: { with: /\A[0-9]+\z/, max_length: [11], message: 'Input only number'}
+    validates :phone_num, format: { with: /\A[0-9]+\z/, max_length: [11], message: 'Input only number' }
   end
 
   def save

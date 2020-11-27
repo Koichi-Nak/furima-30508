@@ -1,5 +1,4 @@
 class Transaction < ApplicationRecord
-
   with_options presence: true do
     validates :postal_code
     validates :add_pref_id
@@ -10,5 +9,4 @@ class Transaction < ApplicationRecord
   end
 
   belongs_to :order
-
 end

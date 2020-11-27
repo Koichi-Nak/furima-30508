@@ -35,7 +35,7 @@ class OrdersController < ApplicationController
       redirect_to root_path
     end
   end
-  
+
   def pay_item
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
@@ -44,5 +44,4 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
-
 end
