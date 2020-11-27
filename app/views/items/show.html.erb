@@ -4,7 +4,7 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= @item.item_name %>
+      <%= @item.name %>
     </h2>
     <div class='item-img-content'>
       <%= image_tag @item.image ,class:"item-box-img" %>
@@ -29,7 +29,7 @@
         <p class='or-text'>or</p>
         <%= link_to '削除', item_path, method: :delete, class:'item-destroy' %>
       <% else %>
-        <%= link_to '購入画面に進む', "#" ,class:"item-red-btn"%>
+        <%= link_to '購入画面に進む', item_orders_path(@item), class:"item-red-btn" %>
       <% end %>
     <% end %>
 
